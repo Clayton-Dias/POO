@@ -9,7 +9,7 @@ class Carro:
         self.cor = None
         self.marca = None
         self.modelo = None
-        pass
+        #pass
 
     # Métodos
     def ligar(self):
@@ -22,8 +22,8 @@ class Carro:
 # Criar um objeto "fusca"
 fusca = Carro()  # criando uma instância do tipo Carro
 
-#Cor do Carro
-fusca.cor = "azul"
+#Definindo cor do Carro
+fusca.cor = "azul" 
 
 #Ligar carro
 fusca.ligar()
@@ -36,9 +36,8 @@ print(fusca.cor)
 
 
 #Criando outro objeto
-veloz = Carro()
-veloz.cor = "prata"
-veloz.ligar()
-print(veloz.cor)
-veloz.desligar()
-
+veloz = Carro()     #Instância da Classe Carro
+veloz.cor = "prata" #Define valor do atributo
+veloz.ligar()       #Executa método
+print(veloz.cor)    #Mostrar valor do atributo do objeto veloz
+veloz.desligar()    #Executa método

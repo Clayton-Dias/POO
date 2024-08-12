@@ -1,19 +1,20 @@
-#A palavra "polimorfismo" significa "muitas formas" e, na programação, refere-se a métodos/funções/operadores com o mesmo nome que podem ser executados em muitos objetos ou classes.
-#O polimorfismo é frequentemente usado em métodos de classe, onde podemos ter vários classes com o mesmo nome de método.
+# A palavra "polimorfismo" significa "muitas formas" e, na programação, refere-se a métodos/funções/operadores com o mesmo nome que podem ser executados em muitos objetos ou classes.
+# O polimorfismo é frequentemente usado em métodos de classe, onde podemos ter vários classes com o mesmo nome de método.
 
-#Classe Pai
+# Classe Pai
 class Veiculo:
-    
+
     def __init__(self, marca, modelo):
         self.marca = marca
         self.modelo = modelo
 
     def ligar(self):
         print("Ligando...")
-    
+
     def desligar(self):
         print("Desligando...")
 
+# Classe Filho 1
 class Carro(Veiculo):
 
     def __init__(self, marca, modelo, ano):
@@ -21,11 +22,12 @@ class Carro(Veiculo):
         self.ano = ano
 
     def ligar(self):
-        print(f"{super().ligar()}  o carro" ) 
+        print(f"{super().ligar()}  o carro")
 
     def desligar(self):
-        print(f"{super().ligar()} o carro")   
+        print(f"{super().ligar()} o carro")
 
+# Classe Filho 2
 class Barco(Veiculo):
 
     def __init__(self, marca, modelo):
@@ -37,6 +39,7 @@ class Barco(Veiculo):
     def desligar(self):
         print(f"{super().desligar()} o barco")
 
+# Classe Filho 3
 class Aviao(Veiculo):
 
     def __init__(self, marca, modelo):
@@ -49,16 +52,15 @@ class Aviao(Veiculo):
         print("Pousando")
 
 
-#Criando objetos: 
-carro = Carro("Lamborghini", "Aventador", 2016) #Obejto Carro
+# Criando objetos:
+carro = Carro("Lamborghini", "Aventador", 2016)  # Obejto Carro
 
-barco = Barco("Fibrafort","Focker 272 GTO") #Obejto Barco
+barco = Barco("Fibrafort", "Focker 272 GTO")  # Obejto Barco
 
-aviao = Aviao("Boeing","747-400") #Obejto Aviao
+aviao = Aviao("Boeing", "747-400")  # Obejto Aviao
 
 for x in (carro, barco, aviao):
     print(x.marca, x.modelo)
-    #print(x.modelo)
+    # print(x.modelo)
     x.ligar()
     x.desligar()
-
